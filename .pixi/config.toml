@@ -1,0 +1,2 @@
+detached-environments = "/cfs/klemming/projects/supr/snic2021-6-194/pixi/envs"
+default-channels = ["conda-forge", "bioconda"]
