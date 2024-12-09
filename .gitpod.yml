@@ -1,5 +1,15 @@
 image: nfcore/gitpod:latest
 
+tasks:
+  - name: Install Quarto
+    command: conda install quarto -y && conda clean -a -y && exit
+  - name: Install Pixi
+    command: |
+      sudo chown gitpod -R /home/gitpod/
+      curl -fsSL https://pixi.sh/install.sh | bash
+      . /home/gitpod/.bashrc
+
 vscode:
   extensions:
     - nf-core.nf-core-extensionpack
+    - quarto.quarto
